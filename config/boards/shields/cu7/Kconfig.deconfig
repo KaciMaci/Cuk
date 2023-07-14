@@ -1,4 +1,4 @@
-if SHIELD_Cu7
+if SHIELD_CU7
 
 config ZMK_KEYBOARD_NAME
    default "Cu7"

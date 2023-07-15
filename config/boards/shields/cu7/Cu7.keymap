@@ -25,7 +25,7 @@
 
         layer_0 {
             bindings = <
-    &kp Q     &kp W      &kp E       
+    &kp Q     &tog layer_1      &kp E       
     &kp A     &kp S      &kp D       
     &kp Z     &kp Z      &kp X       
             >;

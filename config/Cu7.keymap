@@ -40,17 +40,17 @@
 
         layer_0 {
             bindings = <
-    &kp Q     &kp W      &kp E       
-    &kp A     &kp S      &kp D       
-    &kp Z     &kp Z      &kp X  
+    &kp Q     &kp W      &kp E    
+    &kp A     &kp S      &kp D     
+    &kp Z     &kp Z      &kp X
             >;
         };
         
         layer_1 {
             bindings = <
-    &kp Q     &kp W      &kp E       
-    &kp A     &kp S      &kp D       
-    &kp Z     &kp Z      &kp X   
+    &kp Q     &kp W      &kp E
+    &kp A     &kp S      &kp D
+    &kp Z     &kp Z      &kp X
             >;
          };
     };

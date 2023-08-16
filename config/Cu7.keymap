@@ -8,6 +8,12 @@
 
 / {
     behaviors {
+         rot_kp: behavior_sensor_rotate_kp {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            label = "ENC_KP";
+            #sensor-binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+        };
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "homerow mods";
@@ -36,7 +42,8 @@
             bindings = <
     &kp Q     &kp W      &kp E       
     &kp A     &kp S      &kp D       
-    &kp Z     &kp Z      &kp X       
+    &kp Z     &kp Z      &kp X  
+sensor-bindings = <&rot_kp PG_UP PG_DN>;
             >;
         };
         
@@ -45,6 +52,7 @@
     &kp Q     &kp W      &kp E       
     &kp A     &kp S      &kp D       
     &kp Z     &kp Z      &kp X   
+sensor-bindings = <&rot_kp PG_UP PG_DN>;
             >;
          };
     };

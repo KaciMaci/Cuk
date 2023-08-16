@@ -1,2 +1,0 @@
-config SHIELD_Cu7
-   def_bool $(shields_list_contains, Cu7)

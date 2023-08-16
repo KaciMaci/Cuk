@@ -1,6 +1,0 @@
-if SHIELD_CU7
-
-config ZMK_KEYBOARD_NAME
-   default "Cu7"
-
-   endif

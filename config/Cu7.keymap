@@ -48,7 +48,7 @@
         };
         
         layer_1 {
-            ensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
             bindings = <
               &kp W
     &kp A     &kp S      &kp D

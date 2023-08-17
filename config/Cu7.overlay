@@ -20,8 +20,8 @@
 si_encoder: si_left {
         compatible = "alps,ec11";
         label = "SI_ENCODER";
-        a-gpios = <&pro_micro 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        b-gpios = <&pro_micro 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        a-gpios = <&pro_micro 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        b-gpios = <&pro_micro 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         steps = <80>;
     };
 

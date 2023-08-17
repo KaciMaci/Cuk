@@ -22,10 +22,17 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_0";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp F15>, <&kp F15>, <&tog layer_1>;
+        };
      combos {
         compatible = "zmk,combos";
         combo_esc {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <2 7>;
             bindings = <&tog layer_1>;
            };
@@ -40,7 +47,7 @@
 
         layer_0 {
             bindings = <
-                      &kp F15
+                       &td0
     &mt F17 F18     &mt F19 F20     &mt F21 F22     
        &kp J           &kp K           &kp L
             >;
@@ -50,11 +57,11 @@
         
         layer_1 {
             bindings = <
-            &bootloader
+              &td0
     &kp F   &bt BT_CLR   &kp F
-    &kp F     &kp F      &kp F
+    &kp F   &bootloader  &kp F
             >;
-   sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+   sensor-bindings = <&inc_dec_kp F16 F14>;
 
         };
     };

@@ -26,8 +26,8 @@
         compatible = "zmk,combos";
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <1 7>;
-            bindings = <&kp J>;
+            key-positions = <1 6>;
+            bindings = <&tog layer_1>;
            };
         };
     };
@@ -40,18 +40,18 @@
 
         layer_0 {
             bindings = <
-              &kp W
-    &kp A     &kp S      &kp D     
-    &kp Z     &kp Z      &kp X
+                &kp F15
+    &kp A     &mt F17 F18     &kp D     
+    &kp Z        &kp Z        &kp X
             >;
-    sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+    sensor-bindings = <&inc_dec_kp F16 F14>;
 
         };
         
         layer_1 {
             bindings = <
-              &kp W
-    &kp A     &kp S      &kp D
+            &bootloader
+    &kp A   &bt BT_CLR   &kp D
     &kp Z     &kp Z      &kp X
             >;
    sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;

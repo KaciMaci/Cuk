@@ -1,15 +1,13 @@
 / {
     chosen {
-        zmk,kscan = &kscan0;
+        zmk,kscan = &default_kscan;
     };
 
-    kscan0: kscan_0 {
+    default_kscan: kscan {
         compatible = "zmk,kscan-gpio-direct";
-        label = "KSCAN";
-        rows = <2>;
-        columns = <3>;
+        label = "default_kscan";
 
-        input-gpios = 
+       input-gpios = 
          <&pro_micro 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
          <&pro_micro 7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
          <&pro_micro 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,

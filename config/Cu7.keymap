@@ -29,22 +29,24 @@
             tapping-term-ms = <200>;
             bindings = <&kp F15>, <&kp F15>, <&tog layer_2>;
         };
-       td1: tap_dance_1 {
+        td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_1";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp J>, <&mo layer_1>;
         };
-       combos {
+     combos {
         compatible = "zmk,combos";
         combo_esc {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <1 6>;
             bindings = <&tog layer_2>;
+           };
         };
     };
 };
+
 
 / {
     keymap {

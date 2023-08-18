@@ -7,19 +7,6 @@
 #define layer_2 2
 
 / {
-    macros {
-        zed_em_kay: zed_em_kay {
-            label = "ZM_zed_em_kay";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-          = <&macro_tap &kp N2 &kp N8 &kp N0 &kp N8>
-            ;
-        };
-    };
-};
-
-/ {
     behaviors {
          rot_kp: behavior_sensor_rotate_kp {
             compatible = "zmk,behavior-sensor-rotate-var";
@@ -69,9 +56,9 @@
         };
         
         layer_1 {
-            bindings = <&zed_em_kay>;
+            bindings = <
               &td0
-    &zed_em_kay   &kp K_COPY   &kp K_PASTE
+    &kp X   &kp K_COPY   &kp K_PASTE
     &trans   &kp C_AL_CALC  &kp DEL
             >;
    sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;

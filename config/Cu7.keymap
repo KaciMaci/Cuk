@@ -65,10 +65,10 @@
         layer_1 {
             bindings = <
               &td0
-    &kp X   &bt BT_CLR   &kp X
-    &kp X   &bootloader  &kp X
+    &kp X   &kp C_AC_COPY   &kp C_AC_PASTE
+    &trans   &kp C_AL_CALC  &kp DEL
             >;
-   sensor-bindings = <&inc_dec_kp F16 F14>;
+   sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 
         };
 

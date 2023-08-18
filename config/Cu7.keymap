@@ -8,8 +8,8 @@
 
 / {
     macros {
-        28: 28 {
-            label = "28";
+        zed_em_kay: zed_em_kay {
+            label = "ZM_zed_em_kay";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -69,9 +69,9 @@
         };
         
         layer_1 {
-            bindings = <28>;
+            bindings = <&zed_em_kay>;
               &td0
-    &28   &kp K_COPY   &kp K_PASTE
+    &zed_em_kay   &kp K_COPY   &kp K_PASTE
     &trans   &kp C_AL_CALC  &kp DEL
             >;
    sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;

@@ -57,7 +57,7 @@
         
         layer_1 {
             bindings = <
-              &td0
+              &trans
     &kp X   &kp K_COPY   &kp K_PASTE
     &trans   &kp C_AL_CALC  &kp DEL
             >;

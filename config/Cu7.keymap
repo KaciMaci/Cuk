@@ -26,15 +26,8 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp F15>, <&kp F15>, <&tog layer_2>;
-        };
-        td1: tap_dance_1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_1";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp J>, <&mo layer_1>;
+            tapping-term-ms = <100>;
+            bindings = <&kp F15>, <&tog layer_1>;
         };
      combos {
         compatible = "zmk,combos";
@@ -55,8 +48,8 @@
         layer_0 {
             bindings = <
                    &td0
-    &kp F17     &mt F18 F19     &kt F21     
-     &td1         &kp K         &kp L
+    &kp F17     &mt F18 F19     &kp 20     
+     &kp J         &kp K         &kp L
             >;
     sensor-bindings = <&inc_dec_kp F16 F14>;
 
@@ -65,7 +58,7 @@
         layer_1 {
             bindings = <
               &td0
-    &kp X   &kp C_AC_COPY   &kp C_AC_PASTE
+    &kp X   &kp K_COPY   &kp K_PASTE
     &trans   &kp C_AL_CALC  &kp DEL
             >;
    sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;

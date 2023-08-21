@@ -22,12 +22,12 @@ si_encoder: si_left {
         label = "SI_ENCODER";
         a-gpios = <&pro_micro 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         b-gpios = <&pro_micro 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        steps = <10>;
+        steps = <80>;
     };
 
 sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&si_encoder>;
-        triggers-per-rotation = <20>;
+        triggers-per-rotation = <10>;
     };
 };

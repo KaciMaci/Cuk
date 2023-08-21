@@ -28,6 +28,6 @@ si_encoder: si_left {
 sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&si_encoder>;
-        triggers-per-rotation = <10>;
+        triggers-per-rotation = <40>;
     };
 };

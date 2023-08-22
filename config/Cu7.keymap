@@ -60,7 +60,7 @@
         compatible = "zmk,keymap";
 
         layer_0 {
-            bindings = <
+            bindings = <&ctrl_c>;
                    &td0
     &kp C_PREV     &mt F18 F19     &kp C_NEXT     
      &kp J         &kp K         &kp L
@@ -70,8 +70,7 @@
         };
         
         layer_1 {
-         bindings = <&ctrl_c>
-        ;
+         bindings = <&ctrl_c>;
              &trans
     &kp X   &ctrl_c   &kp C_PASTE
     &trans   &kp C_AL_CALC  &kp DEL
@@ -81,7 +80,7 @@
         };
 
    layer_2 {
-            bindings = <
+            bindings = <&ctrl_c>;
               &td0
     &kp F   &bt BT_CLR   &kp F
     &kp F   &bootloader  &kp F

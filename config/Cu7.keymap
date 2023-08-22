@@ -40,13 +40,27 @@
     };
 };
 
+/ {
+    macros {
+        ctrl_c: ctrl_c {
+            label = "ctrl_c";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp C>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+    };
+};
 
 / {
     keymap {
         compatible = "zmk,keymap";
 
         layer_0 {
-            bindings = <
+            bindings = <&zed_em_kay>;
                    &td0
     &kp C_PREV     &mt F18 F19     &kp C_NEXT     
      &kp J         &kp K         &kp L
@@ -56,12 +70,12 @@
         };
         
         layer_1 {
-            bindings = <
+            bindings = <&ctrl_c>;
               &trans
-    &kp X   &kp C_COPY   &kp C_PASTE
+    &kp X   &ctrl_c   &kp C_PASTE
     &trans   &kp C_AL_CALC  &kp DEL
             >;
-   sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+   sensor-bindings = <&inc_dec_kp F17 F15>;
 
         };
 

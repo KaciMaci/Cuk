@@ -60,7 +60,7 @@
         compatible = "zmk,keymap";
 
         layer_0 {
-            bindings = <&zed_em_kay>;
+            bindings = <
                    &td0
     &kp C_PREV     &mt F18 F19     &kp C_NEXT     
      &kp J         &kp K         &kp L

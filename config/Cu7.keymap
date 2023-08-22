@@ -71,7 +71,8 @@
         
         layer_1 {
          bindings = <&ctrl_c>
-              &trans
+        ;
+             &trans
     &kp X   &ctrl_c   &kp C_PASTE
     &trans   &kp C_AL_CALC  &kp DEL
             >;

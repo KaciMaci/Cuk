@@ -72,7 +72,7 @@
         layer_1 {
             bindings = <
               &trans
-    &kp X   &kp K_COPY   &kp K_PASTE
+    &kp X   &ctrl_c   &kp K_PASTE
     &trans   &kp C_AL_CALC  &kp DEL
             >;
    sensor-bindings = <&inc_dec_kp F17 F15>;

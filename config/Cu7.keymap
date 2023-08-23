@@ -52,6 +52,16 @@
                 , <&macro_release &kp LCTRL>
                 ;
         };
+ctrl_v: ctrl_v {
+            label = "ctrl_v";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp V>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
     };
 };
 
@@ -72,7 +82,7 @@
         layer_1 {
             bindings = <
               &trans
-    &kp X   &ctrl_c   &kp K_PASTE
+    &kp X   &ctrl_c   &ctrl_v
     &trans   &kp C_AL_CALC  &kp DEL
             >;
    sensor-bindings = <&inc_dec_kp F17 F15>;

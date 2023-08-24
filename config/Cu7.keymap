@@ -14,12 +14,6 @@
             #sensor-binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
-         ctrl_f: ctrl_f {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "ctrl_f";
-            #sensor-binding-cells = <0>;
-            bindings = <&ctrl_f16>, <&ctrl_f14>;
-        };
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "homerow mods";
@@ -68,26 +62,6 @@
                 , <&macro_release &kp LCTRL>
                 ;
         };
-        ctrl_f16: ctrl_f16 {
-            label = "ctrl_f16";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp F16>
-                , <&macro_release &kp LCTRL>
-                ;
-        };
-        ctrl_f14: ctrl_f14 {
-            label = "ctrl_f14";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp F14>
-                , <&macro_release &kp LCTRL>
-                ;
-        };
     };
 };
 
@@ -109,9 +83,9 @@
             bindings = <
               &trans
     &kp X   &ctrl_c   &ctrl_v
-    &trans   &kp C_AL_CALC  &kp DEL
+    &kp LCTRL   &kp C_AL_CALC  &kp DEL
             >;
-     sensor-bindings = <&ctrl_f>;
+     sensor-bindings = <&inc_dec_kp F16 F14>;
 
         };
 

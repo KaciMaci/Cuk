@@ -32,8 +32,8 @@
      combos {
         compatible = "zmk,combos";
         combo_esc {
-            timeout-ms = <100>;
-            key-positions = <1 6>;
+            timeout-ms = <200>;
+            key-positions = <0 5>;
             bindings = <&tog layer_2>;
            };
         };
@@ -52,13 +52,33 @@
                 , <&macro_release &kp LCTRL>
                 ;
         };
-ctrl_v: ctrl_v {
+        ctrl_v: ctrl_v {
             label = "ctrl_v";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCTRL>
                 , <&macro_tap &kp V>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+        ctrl_f16: ctrl_f16 {
+            label = "ctrl_f16";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp F16>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+        ctrl_f14: ctrl_f14 {
+            label = "ctrl_f14";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp F14>
                 , <&macro_release &kp LCTRL>
                 ;
         };
@@ -85,7 +105,7 @@ ctrl_v: ctrl_v {
     &kp X   &ctrl_c   &ctrl_v
     &trans   &kp C_AL_CALC  &kp DEL
             >;
-   sensor-bindings = <&inc_dec_kp F17 F15>;
+   sensor-bindings = <&inc_dec_kp ctrl_f16 ctrl_f14>;
 
         };
 

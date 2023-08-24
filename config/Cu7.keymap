@@ -14,6 +14,12 @@
             #sensor-binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
+         ctrl_f: ctrl_f {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ctrl_f";
+            #sensor-binding-cells = <0>;
+            bindings = <&ctrl_f16>, <&ctrl_f14>;
+        };
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "homerow mods";
@@ -105,7 +111,7 @@
     &kp X   &ctrl_c   &ctrl_v
     &trans   &kp C_AL_CALC  &kp DEL
             >;
-     sensor-bindings = <&inc_dec_kp ctrl_f16 ctrl_f14>;
+     sensor-bindings = <&ctrl_f>;
 
         };
 

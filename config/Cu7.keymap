@@ -73,7 +73,7 @@
             bindings = <
                    &td0
     &kp K_PREV     &mt F18 F19     &kp C_NEXT     
-     &kp J         &kp K         &kp L
+     &kp F20         &kp K         &kp L
             >;
     sensor-bindings = <&inc_dec_kp F15 F14>;
 
@@ -83,7 +83,7 @@
             bindings = <
               &trans
     &kp X   &ctrl_c   &ctrl_v
-    &kp LCTRL   &kp C_AL_CALC  &kp DEL
+    &kp F21   &kp C_AL_CALC  &kp DEL
             >;
      sensor-bindings = <&inc_dec_kp F17 F16>;
 

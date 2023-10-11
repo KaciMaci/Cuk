@@ -72,7 +72,7 @@
         layer_0 {
             bindings = <
                    &td0
-    &kp K_PREV     &mt F18 F19     &kp C_NEXT     
+    &kp C_PREV     &mt F18 F19     &kp C_NEXT     
      &kp F20         &kp K         &kp L
             >;
     sensor-bindings = <&inc_dec_kp F15 F14>;

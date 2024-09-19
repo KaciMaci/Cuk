@@ -1,0 +1,102 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+#define layer_0 0
+#define layer_1 1
+#define layer_2 2
+
+/ {
+    behaviors {
+         rot_kp: behavior_sensor_rotate_kp {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            label = "ENC_KP";
+            #sensor-binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+        };
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "homerow mods";
+            #binding-cells = <2>;
+            tapping-term-ms = <500>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_0";
+            #binding-cells = <0>;
+            tapping-term-ms = <500>;
+            bindings = <&kp C_PP>, <&tog layer_1>;
+        };
+     combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <200>;
+            key-positions = <0 5>;
+            bindings = <&tog layer_2>;
+           };
+        };
+    };
+};
+
+/ {
+    macros {
+        ctrl_c: ctrl_c {
+            label = "ctrl_c";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp C>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+        ctrl_v: ctrl_v {
+            label = "ctrl_v";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp V>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+    };
+};
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        layer_0 {
+            bindings = <
+                   &td0
+    &kp C_PREV     &mt F18 F19     &kp C_NEXT     
+     &kp F20         &kp K         &kp L
+            >;
+    sensor-bindings = <&inc_dec_kp F15 F14>;
+
+        };
+        
+        layer_1 {
+            bindings = <
+              &trans
+    &kp X   &ctrl_c   &ctrl_v
+    &kp F21   &kp C_AL_CALC  &kp DEL
+            >;
+     sensor-bindings = <&inc_dec_kp F17 F16>;
+
+        };
+
+   layer_2 {
+            bindings = <
+              &td0
+    &kp F   &bt BT_CLR   &kp F
+    &kp F   &bootloader  &kp F
+            >;
+   sensor-bindings = <&inc_dec_kp F16 F14>;
+
+        };
+    };
+};
